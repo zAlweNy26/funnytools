@@ -38,22 +38,7 @@ export function generateCreditCard(amount, options) {
         || (options.visa == undefined && options.mastercard == undefined)) type = [CreditCard.Visa, CreditCard.MasterCard]
     else if (options.visa != undefined) type = [CreditCard.Visa]
     else if (options.mastercard != undefined) type = [CreditCard.MasterCard]
-    let creditCardsNumbers = { 
-        "Visa": [
-            /*{ 
-                Number: "4000 0000 0000 0000",
-                Expiration: "",
-                CVV: ""
-            }*/
-        ], 
-        "MasterCard": [
-            /*{ 
-                Number: "5000 0000 0000 0000",
-                Expiration: "",
-                CVV: ""
-            }*/
-        ] 
-    }
+    let creditCardsNumbers = { "Visa": [], "MasterCard": [] }
     console.time("Credit cards generated in")
     if (type.includes(CreditCard.Visa)) {
         for (let i = 0; i < amount; i++) {
