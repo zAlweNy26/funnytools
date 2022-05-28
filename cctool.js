@@ -1,29 +1,11 @@
-import { Console } from "console"
-import { Transform } from "stream"
+import { displayTable } from "./functions.js"
 
 const CreditCard = {
     Visa: [[40000, 499999], [402600, 402699], [417500, 417599], [450800, 450899], [484400, 484499], [491300, 491399], [491700, 491799]],
     MasterCard: [[222100, 272099], [510000, 559999]]
 }
 
-function displayTable(input) {
-  const ts = new Transform({ transform(chunk, enc, cb) { cb(null, chunk) } })
-  const logger = new Console({ stdout: ts })
-  logger.table(input)
-  const table = (ts.read() || '').toString()
-  let result = ''
-  for (let row of table.split(/[\r\n]+/)) {
-    let r = row.replace(/[^┬]*┬/, '┌')
-    r = r.replace(/^├─*┼/, '├')
-    r = r.replace(/│[^│]*/, '')
-    r = r.replace(/^└─*┴/, '└')
-    r = r.replace(/'/g, ' ')
-    result += `${r}\n`
-  }
-  console.log(result)
-}
-
-export function checkIsValid(number) {
+export function isValidCreditCard(number) {
     let checkDigit = number[number.length - 1]
     let genDigit = getLuhnDigit(number.substring(0, number.length - 1))
     console.log(`\x1b[33mLast digit : ${checkDigit} | Generated digit : ${genDigit}\x1b[0m`)
@@ -48,12 +30,12 @@ export function generateCreditCard(amount, options) {
             let finalNumbers = firstSixNumbers + middleNineNumbers
             finalNumbers += getLuhnDigit(finalNumbers)
             creditCardsNumbers.Visa.push({ 
-                Number: finalNumbers.match(/.{1,4}/g).join(' '),
+                Digits: finalNumbers.match(/.{1,4}/g).join(' '),
                 Expiration: getRandomNumber(1, 12) + "/" + getRandomNumber(currentYear, currentYear + 5),
                 CVV: getRandomNumber(0, 999)
             })
         }
-        console.log("\x1b[47m\x1b[34mVisa\x1b[0m")
+        console.log("\x1b[34mVisa\x1b[0m")
         displayTable(creditCardsNumbers.Visa)
     }
     if (type.includes(CreditCard.MasterCard)) {
@@ -64,7 +46,7 @@ export function generateCreditCard(amount, options) {
             let finalNumbers = firstSixNumbers + middleNineNumbers
             finalNumbers += getLuhnDigit(finalNumbers)
             creditCardsNumbers.MasterCard.push({ 
-                Number: finalNumbers.match(/.{1,4}/g).join(' '),
+                Digits: finalNumbers.match(/.{1,4}/g).join(' '),
                 Expiration: getRandomNumber(1, 12) + "/" + getRandomNumber(currentYear, currentYear + 5),
                 CVV: getRandomNumber(0, 999)
             })
