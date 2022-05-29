@@ -41,3 +41,9 @@ export function displayTable(input) {
     }
     console.log(result)
 }
+
+export function getRandomNumber(min, max, addZeros = true) {
+    let num = Math.floor(Math.random() * (max - min + 1) + min).toString()
+    if (addZeros) while (num.length < max.toString().length) num = "0" + num
+    return num
+}
