@@ -1,10 +1,10 @@
 import axios from "axios"
-import cheerio from "cheerio"
+import { load as loadPage } from "cheerio"
 
 async function getInputFields(website) {
     // vedere codice instabrute
     const resp = await axios.get(website)
-    const $ = cheerio.load(resp.data)
+    const $ = loadPage(resp.data)
     let passwordField = $("body")
     console.log(passwordField.html())
     return []

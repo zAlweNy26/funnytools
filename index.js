@@ -6,6 +6,7 @@ import { isValidUrl, convertToInteger, readFile } from "./functions.js"
 import { isValidCreditCard, generateCreditCard } from "./cctool.js"
 import { doBruteForce } from "./attacktool.js"
 import { generateIBAN, isValidCountryCode, isValidIBAN } from "./ibantool.js"
+import { displaySortedScooters, validateSortMode } from "./scooterstool.js"
 
 const program = new Command()
     .version(`v${pjson.version} by zAlweNy26`, '-v, --version', 'Output the current version of the program')
@@ -47,5 +48,11 @@ program.command("bruteforce")
     .description("Make a bruteforce attack in the chosen website, optionally with a dictionary")
     .option('-dt, --dictionary <file>', 'The dictionary file path to use for the attack', readFile)
     .action((username, website, options) => doBruteForce(username, website, options.dictionary))
+
+program.command("scooters")
+    .argument('<city>', 'The city to check for the list of scooters')
+    .argument('<sort>', 'How the program should sort the list of scooters', validateSortMode)
+    .description("Display a list of available scooters in a specific city and sort them like you prefer")
+    .action((city, sort) => displaySortedScooters(city, sort))
 
 program.parse(process.argv)

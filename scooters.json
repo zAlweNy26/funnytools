@@ -1,0 +1,290 @@
+{
+	"Palermo": [
+		{
+			"scooterName": "Bit",
+			"unlockPrice": 1,
+			"minutePrice": 0.15,
+			"pausePrice": 0.05,
+			"finePrice": 300,
+			"bookingPrice": 0,
+			"bookingTime": 10,
+			"passList": {
+				"1h": [
+					{
+						"passName": "Easy Bit 1H",
+						"passPrice": 4.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 0
+					}
+				],
+				"24h": [
+					{
+						"passName": "Unblock Daily",
+						"passPrice": 2.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 15
+					}
+				],
+				"7d": [
+					{
+						"passName": "Unblock Weekly",
+						"passPrice": 10.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 110
+					}
+				],
+				"1m": [
+					{
+						"passName": "Unbitable Monthly",
+						"passPrice": 29.99,
+						"availableUnlocks": 4,
+						"rideMinutes": 60
+					}
+				],
+				"6m": [
+					{
+						"passName": "Unbitable 6M",
+						"passPrice": 164.99,
+						"availableUnlocks": 4,
+						"rideMinutes": 60
+					}
+				],
+				"1y": [
+					{
+						"passName": "Unbitable 12M",
+						"passPrice": 29.99,
+						"availableUnlocks": 4,
+						"rideMinutes": 60
+					}
+				]
+			}
+		},
+		{
+			"scooterName": "Dott",
+			"unlockPrice": 1,
+			"minutePrice": 0.17,
+			"pausePrice": 0,
+			"finePrice": 300,
+			"bookingPrice": null,
+			"bookingTime": null,
+			"passList": {
+				"1h": [],
+				"24h": [
+					{
+						"passName": "Andata e Ritorno",
+						"passPrice": 2.99,
+						"availableUnlocks": 2,
+						"rideMinutes": 30
+					},
+					{
+						"passName": "Pass Esplora 24h",
+						"passPrice": 7.99,
+						"availableUnlocks": 10,
+						"rideMinutes": 30
+					}
+				],
+				"7d": [
+					{
+						"passName": "Settimanale",
+						"passPrice": 14.99,
+						"availableUnlocks": 25,
+						"rideMinutes": 30
+					}
+				],
+				"1m": [
+					{
+						"passName": "Sblocchi (Mensile)",
+						"passPrice": 1.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 0
+					},
+					{
+						"passName": "Mensile",
+						"passPrice": 34.99,
+						"availableUnlocks": 100,
+						"rideMinutes": 30
+					}
+				],
+				"6m": [],
+				"1y": []
+			}
+		},
+		{
+			"scooterName": "Voi",
+			"unlockPrice": 1,
+			"minutePrice": 0.15,
+			"pausePrice": 0,
+			"finePrice": null,
+			"bookingPrice": null,
+			"bookingTime": null,
+			"passList": {
+				"1h": [],
+				"24h": [
+					{
+						"passName": "24h Pass",
+						"passPrice": 6.99,
+						"availableUnlocks": 9,
+						"rideMinutes": 200
+					}
+				],
+				"7d": [],
+				"1m": [
+					{
+						"passName": "Minuti Mensili 300",
+						"passPrice": 29.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 300
+					},
+					{
+						"passName": "Minuti Mensili 750",
+						"passPrice": 69.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 750
+					}
+				],
+				"6m": [],
+				"1y": []
+			}
+		},
+		{
+			"scooterName": "Tier",
+			"unlockPrice": 1,
+			"minutePrice": 0.15,
+			"pausePrice": 0.15,
+			"finePrice": null,
+			"bookingPrice": 0,
+			"bookingTime": 10,
+			"passList": {
+				"1h": [],
+				"24h": [
+					{
+						"passName": "Go Roundtrip",
+						"passPrice": 3.99,
+						"availableUnlocks": 2,
+						"rideMinutes": 30
+					}
+				],
+				"7d": [],
+				"1m": [
+					{
+						"passName": "Go Unlocked",
+						"passPrice": 3.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 0
+					},
+					{
+						"passName": "Go Unlocked 250",
+						"passPrice": 29.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 250
+					}
+				],
+				"6m": [],
+				"1y": []
+			}
+		},
+		{
+			"scooterName": "Lime",
+			"unlockPrice": 1,
+			"minutePrice": 0.19,
+			"pausePrice": null,
+			"finePrice": null,
+			"bookingPrice": null,
+			"bookingTime": null,
+			"passList": {
+				"1h": [],
+				"24h": [
+					{
+						"passName": "24 ore",
+						"passPrice": 14.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 90
+					}
+				],
+				"7d": [],
+				"1m": [
+					{
+						"passName": "Lime Prime",
+						"passPrice": 3.99,
+						"availableUnlocks": 0,
+						"rideMinutes": 0
+					}
+				],
+				"6m": [],
+				"1y": []
+			}
+		},
+		{
+			"scooterName": "Link",
+			"unlockPrice": 0,
+			"minutePrice": 0.2,
+			"pausePrice": null,
+			"finePrice": null,
+			"bookingPrice": null,
+			"bookingTime": null,
+			"passPrices": {
+				"1h": 0,
+				"24h": 5.99,
+				"7d": 19.99,
+				"1m": 39.99,
+				"6m": 0,
+				"1y": 0
+			}
+		},
+		{
+			"scooterName": "Helbiz",
+			"unlockPrice": 1,
+			"minutePrice": 0.2,
+			"pausePrice": null,
+			"finePrice": null,
+			"bookingPrice": null,
+			"bookingTime": null,
+			"passList": {
+				"1h": [],
+				"24h": [
+					{
+						"passName": "Helbiz Day Pass",
+						"passPrice": 6.99,
+						"availableUnlocks": 4,
+						"rideMinutes": 30
+					}
+				],
+				"7d": [
+					{
+						"passName": "Helbiz Week Pass",
+						"passPrice": 19.99,
+						"availableUnlocks": 25,
+						"rideMinutes": 30
+					}
+				],
+				"1m": [
+					{
+						"passName": "Helbiz Unlimited",
+						"passPrice": 39.99,
+						"availableUnlocks": 100,
+						"rideMinutes": 30
+					}
+				],
+				"6m": [],
+				"1y": []
+			}
+		},
+		{
+			"scooterName": "Bird",
+			"unlockPrice": 1,
+			"minutePrice": 0.15,
+			"pausePrice": null,
+			"finePrice": null,
+			"bookingPrice": null,
+			"bookingTime": null,
+			"passList": {
+				"1h": [],
+				"24h": [],
+				"7d": [],
+				"1m": [],
+				"6m": [],
+				"1y": []
+			}
+		}
+	]
+}
